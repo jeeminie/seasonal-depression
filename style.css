@@ -82,19 +82,18 @@ body {
 }
 
 .restart-image {
-  position: fixed;
-  bottom: 30px;
-  right: 40px;
-  width: 50%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 120px;
   cursor: pointer;
   transition: transform 0.2s ease;
-  z-index: 1000;
+  z-index: 3;
 }
 
 .restart-image:hover {
   transform: rotate(-7deg) scale(1.05);
 }
-
 /* .restart-image {
   border: 2px dashed red;
 }
