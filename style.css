@@ -1,0 +1,138 @@
+
+@font-face {
+  font-family: 'JamieHand3';
+  src: url('assets/Jeeminie-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'JamieHand3', cursive;
+  background-color: #cccdd6;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url('assets/pencil.png'), auto;
+
+}
+
+.outer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#journal-wrapper {
+  position: relative;
+  width: 3000px;
+  height: auto;
+  transform-origin: top right;
+}
+
+#notebook-bg {
+  width: 100%;
+  height: 100%;
+  display: block
+}
+
+.entry-container {
+  position: absolute;
+  top: 20%;    
+  left: 55%;    
+  width: 25%; 
+  height: 68%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.entry-box {
+  width: 100%;
+  height: 14%; 
+  font-size: 2.5vw; 
+  display: flex;
+  align-items: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+.entry-box.typing {
+  animation: typewrite 2s steps(40, end) forwards;
+}
+
+@keyframes typewrite {
+  from {
+    max-width: 0ch;
+  }
+  to {
+    max-width: 40ch;
+  }
+}
+
+.restart-image {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 1000;
+}
+
+.restart-image:hover {
+  transform: rotate(-7deg) scale(1.05);
+}
+
+/* .restart-image {
+  border: 2px dashed red;
+}
+
+.restart-image:hover {
+  border: 2px solid blue;
+} */
+
+.image-container {
+  position: absolute;
+  top: 0px;         
+  left: -20px;       
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;   
+}
+
+.image-format {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  opacity: 0;
+  display: block;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* .image-container {
+  border: 2px dashed red;
+}
+
+.image-format {
+  border: 2px solid blue;
+} */
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
