@@ -85,7 +85,7 @@ body {
   position: fixed;
   bottom: 30px;
   right: 40px;
-  width: 50px;
+  width: 20%;
   cursor: pointer;
   transition: transform 0.2s ease;
   z-index: 1000;
